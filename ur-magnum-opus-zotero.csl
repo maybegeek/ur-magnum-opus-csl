@@ -339,6 +339,51 @@
 <key macro="issued-year" sort="ascending"/>
     </sort>
     <layout align="left">
+<choose>
+<if type="motion_picture">
+      <group suffix=".">
+<text macro="title"/>
+
+        <text macro="issued" suffix=" "/>
+        <group delimiter=". ">
+        <text macro="author" suffix=""/>
+          <group>
+            <text macro="container-contributors"/>
+            <text macro="secondary-contributors"/>
+            <group delimiter=", ">
+              <text variable="container-title" font-style="italic"/>
+            </group>
+          </group>
+        </group>
+        <text macro="locators"/>
+        <group delimiter=", " prefix=". ">
+          <text macro="event"/>
+          <text macro="publisher"/>
+        </group>
+        <!--
+        Zotero: Angabe spezieller Medieninformationen (Film): [dimensions, medium].
+         -->
+        <choose>
+          <if variable="dimensions medium" match="any">
+            <group prefix=" [" suffix="]">
+            <choose>
+              <if variable="dimensions">
+                <text variable="dimensions" suffix=", " />
+              </if>
+            </choose>
+            <choose>
+              <if variable="medium">
+                <text variable="medium" />
+              </if>
+            </choose>
+            </group>
+          </if>
+        </choose>
+        <!-- /[dimensions, medium] -->
+      </group>
+      <text macro="access" prefix=" " suffix="."/>
+</if>
+<else>
       <group suffix=".">
         <text macro="author" suffix=""/>
         <text macro="issued" suffix=" "/>
@@ -379,6 +424,8 @@
         <!-- /[dimensions, medium] -->
       </group>
       <text macro="access" prefix=" " suffix="."/>
+</else>
+</choose>
     </layout>
 </bibliography>
 </style>
