@@ -353,6 +353,11 @@
         </group>
       </group>
     </group>
+    <choose>
+      <if variable="dimensions">
+        <text variable="dimensions" prefix=". " />
+      </if>
+    </choose>
     <text macro="locators"/>
     <group delimiter=", " prefix=". ">
       <text macro="event"/>
@@ -364,11 +369,6 @@
     <choose>
       <if variable="dimensions medium" match="any">
         <group prefix=" [" suffix="]">
-        <choose>
-          <if variable="dimensions">
-            <text variable="dimensions" suffix=", " />
-          </if>
-        </choose>
         <choose>
           <if variable="medium">
             <text variable="medium" />
@@ -395,6 +395,11 @@
           </group>
         </group>
       </group>
+      <choose>
+        <if variable="dimensions">
+          <text variable="dimensions" prefix=". " />
+        </if>
+      </choose>
       <text macro="locators"/>
       <group delimiter=", " prefix=". ">
         <text macro="event"/>
@@ -406,11 +411,6 @@
       <choose>
         <if variable="dimensions medium" match="any">
           <group prefix=" [" suffix="]">
-          <choose>
-            <if variable="dimensions">
-              <text variable="dimensions" suffix=", " />
-            </if>
-          </choose>
           <choose>
             <if variable="medium">
               <text variable="medium" />
