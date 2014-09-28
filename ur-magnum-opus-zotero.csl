@@ -132,6 +132,28 @@
     </choose>
 </macro>
 
+<macro name="urauthorortitle">
+    <choose>
+      <if type="motion_picture" match="all">
+
+  <names variable="title" />
+      </if>
+      <else>
+  <names variable="author">
+    <name name-as-sort-order="all" and="symbol" sort-separator=", " initialize="false" delimiter="; " delimiter-precedes-last="never">
+      <name-part name="family" font-variant="small-caps"/>
+    </name>
+    <label form="short" prefix=" (" suffix=".)" text-case="capitalize-first" strip-periods="true"/>
+      <substitute>
+        <names variable="editor"/>
+        <names variable="translator"/>
+        <text macro="title"/>
+      </substitute>
+  </names>
+    </else>
+    </choose>
+</macro>
+
 <macro name="publisher">
     <choose>
       <if type="report thesis" match="any">
@@ -311,8 +333,10 @@
 
 <bibliography hanging-indent="true" et-al-min="7" et-al-use-first="6" entry-spacing="0">
     <sort>
+      <key macro="urauthorortitle" />
       <key macro="author"/>
       <key macro="issued-year" sort="ascending"/>
+<key macro="issued-year" sort="ascending"/>
     </sort>
     <layout align="left">
       <group suffix=".">
