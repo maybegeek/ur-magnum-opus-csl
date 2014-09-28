@@ -208,7 +208,7 @@
 <macro name="issued">
 <choose>
 <if variable="issued">
-  <group prefix=" (" suffix=").">
+  <group prefix=" (" suffix="):">
     <choose>
     <if variable="original-date">
       <date variable="original-date" suffix="/">
@@ -230,7 +230,7 @@
   </group>
 </if>
 <else>
-  <text prefix=" (" term="no date" suffix=")." form="short"/>
+  <text prefix=" (" term="no date" suffix="):" form="short"/>
 </else>
 </choose>
 </macro>
