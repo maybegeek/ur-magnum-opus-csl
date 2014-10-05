@@ -276,7 +276,7 @@
 <if type="article-journal article-magazine article-newspaper" match="any">
   <group prefix=". " delimiter=", ">
     <group>
-      <text variable="volume" font-style="italic"/>
+      <text variable="volume" prefix="Jg. " />
       <text variable="issue" prefix=" (" suffix=")"/>
     </group>
     <text variable="page" prefix="S. "/>
