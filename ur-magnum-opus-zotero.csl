@@ -317,7 +317,8 @@
   <layout prefix="(" suffix=")" delimiter="; ">
   <choose>
   <if variable="dimensions medium" match="any">
-  <text font-variant="small-caps" font-style="normal" macro="title"/> <text prefix=" " macro="issued-year"/>
+  <text font-variant="small-caps" font-style="normal" macro="title"/>
+  <text prefix=" " macro="issued-year"/>
   </if>
   <else>
     <group delimiter=" ">
