@@ -295,7 +295,7 @@
     </group>
     <group>
       <label variable="page" form="short" suffix=" "/>
-      <text variable="page" prefix="S. "/>
+      <text variable="page"/>
     </group>
   </group>
 </else-if>
