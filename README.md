@@ -5,7 +5,7 @@ CSL für die Erstellung schriftlicher Arbeiten im geisteswissenschaftlichen Kont
 
 Ganz ähnlich der angepassten Arbeitsumgebung (pandoc, latex, biblatex) soll hier der Stil für Geisteswissenschaften samt den filmwissenschaftlichen Anforderungen für eine CSL-Datei umgesetzt werden.
 
-Zur einfachen Verwendung mittels Citavi, Mendeley oder wiederum pandoc.
+Zur einfachen Verwendung mittels Citavi, Zotero, Mendeley oder wiederum pandoc.
 
 # einfaches Ändern
 
