@@ -137,7 +137,7 @@
 <macro name="urauthorortitle">
 <choose>
 <if type="motion_picture" match="all">
-  <names variable="title" />
+  <text macro="title"/>
 </if>
 <else>
   <names variable="author">
